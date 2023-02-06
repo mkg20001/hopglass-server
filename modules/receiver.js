@@ -64,6 +64,7 @@ module.exports = function (observer, configData) {
   api.receiverCallback  = receiverCallback
   api.sharedConfig = config
   api.getRaw = getRaw
+  api._unsafeGetRaw = () => raw
   for (const i in config.receivers) {
     const r = config.receivers[i]
     try {
